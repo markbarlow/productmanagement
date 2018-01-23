@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Highcharts Example</title>
+
+		<style type="text/css">
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 35px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    }
+
+.centre-me {
+    display: table;
+    width: 100%;
+    /* padding: 100px 0; */
+    text-align: center;
+}
+
+hr {
+  border: 0;
+  background-color: #fff;
+  border-top: 1px dashed #8c8c8c;
+  width: 50%;
+}
+
+
+		</style>
+	</head>
+	<body>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<!-- if you want a different theme 
+<script src="https://code.highcharts.com/js/themes/dark-unica.js"></script>
+-->
+
+<heading class="centre-me"> 
+<h1>Product management skills</h1>
+</heading>
+
+<hr><br><br>
+
+<!-- Start soft skills chart -->
+<div id="soft-skills" style="min-width: 310px; max-width: 800px; height: 700px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+
+/* Override default colours to remove grey and control colour order */
+Highcharts.setOptions({
+    colors: ["#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"]
+});
+
+
+Highcharts.chart('soft-skills', {
+
+    chart: {
+        polar: true
+    },
+
+    title: {
+        text: 'Soft skills evaluation'
+    },
+
+    subtitle: {
+    text: '4 = Very good; 3 = Good; 2 = OK; 1 = Not so good; 0 = Not good at all'
+    },
+
+    pane: {
+        startAngle: 0,
+        endAngle: 360
+    },
+
+    xAxis: {
+        categories: ['Empathy', 'Communication', 'Vision',  'Focus', 'Motivation',  'Patience', 'Curiosity', 'Time Management', 'Tenacity', 'Perspective', 'Diplomacy', 'Leadership',  'Influence', 'Humility']
+    },
+
+    yAxis: {
+        min: 0,
+        max: 5,
+        tickInterval: 1
+    },
+
+
+
+/* Rankings here; type can be line or area */
+    series: [{
+        type: 'area',
+        name: 'Your rating',
+        data: [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2]
+    }, {
+        type: 'area',
+        name: 'Peer average rating',
+        data: [1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 4]
+    }]
+});
+
+</script>
+
+<br><br><hr><br><br>
+<!-- End soft skills chart -->
+
+
+
+
+<!-- Start hard skills chart -->
+<div id="hard-skills" style="min-width: 310px; max-width: 800px; height: 700px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+
+/* Override default colours to remove grey and control colour order */
+Highcharts.setOptions({
+    colors: ["#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1", "#7cb5ec", "#90ed7d"]
+});
+
+
+Highcharts.chart('hard-skills', {
+
+    chart: {
+        polar: true
+    },
+
+    title: {
+        text: 'Hard skills evaluation'
+    },
+
+    subtitle: {
+    text: '4 = Very good; 3 = Good; 2 = OK; 1 = Not so good; 0 = Not good at all'
+    },
+
+    pane: {
+        startAngle: 0,
+        endAngle: 360
+    },
+
+    xAxis: {
+        categories: ['Product vision', 'Managing stakeholders', 'Procuring and managing suppliers', 'Writing epics and user stories',  'Prioritising epics and user stories', 'Agile methodologies', 'Data protection and security', 'Product tech and architecture', 'Evaluating new technology', 'Carrying out QA / UAT', 'Objectives, KPIs, success criteria',  'Analysing and interpreting data', 'Usability testing', 'Building prototypes', 'GDS controls']
+    },
+
+    yAxis: {
+        min: 0,
+        max: 5,
+        tickInterval: 1
+    },
+
+
+
+/* Rankings here; type can be line or area */
+    series: [{
+        type: 'area',
+        name: 'Your rating',
+        data: [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 2]
+    }, {
+        type: 'area',
+        name: 'Peer average rating',
+        data: [1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 4, 2]
+    }]
+});
+
+</script>
+
+<br><br><hr><br><br>
+<!-- End hard skills chart -->
+
+
+
+<!-- Start other skills chart -->
+<div id="other-skills" style="min-width: 310px; max-width: 800px; height: 700px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+
+/* Override default colours to remove grey and control colour order */
+Highcharts.setOptions({
+    colors: ["#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9"]
+});
+
+
+Highcharts.chart('other-skills', {
+
+    chart: {
+        polar: true
+    },
+
+    title: {
+        text: 'Other skills evaluation'
+    },
+
+    subtitle: {
+    text: '4 = Very good; 3 = Good; 2 = OK; 1 = Not so good; 0 = Not good at all'
+    },
+
+    pane: {
+        startAngle: 0,
+        endAngle: 360
+    },
+
+    xAxis: {
+        categories: ['Conducting user research',  'Creating user personas', 'Service design', 'Content design', 'Project management', 'Budget management', 'Business process analysis']
+    },
+
+    yAxis: {
+        min: 0,
+        max: 5,
+        tickInterval: 1
+    },
+
+
+
+/* Rankings here; type can be line or area */
+    series: [{
+        type: 'area',
+        name: 'Your rating',
+        data: [1, 2, 3, 1, 2, 3, 1]
+    }, {
+        type: 'area',
+        name: 'Peer average rating',
+        data: [1, 4, 2, 1, 4, 2, 1]
+    }]
+});
+
+</script>
+
+<br><br><hr><br><br>
+<!-- End other skills chart -->
+
+
+
+	</body>
+</html>

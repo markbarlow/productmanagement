@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Highcharts Example</title>
+		<title>Product Manager evaluation</title>
 
 		<style type="text/css">
 
@@ -27,6 +27,14 @@ hr {
   width: 50%;
 }
 
+.chart-container {
+  min-width: 310px; 
+  max-width: 800px; 
+  height: 700px; 
+  margin: 0 auto; 
+  padding: 30px 0px
+}
+
 
 		</style>
 	</head>
@@ -42,10 +50,10 @@ hr {
 <h1>Product management skills</h1>
 </heading>
 
-<hr><br><br>
+<hr>
 
 <!-- Start soft skills chart -->
-<div id="soft-skills" style="min-width: 310px; max-width: 800px; height: 700px; margin: 0 auto"></div>
+<div id="soft-skills" class="chart-container"></div>
 
 <script type="text/javascript">
 
@@ -100,14 +108,14 @@ Highcharts.chart('soft-skills', {
 
 </script>
 
-<br><br><hr><br><br>
+<hr>
 <!-- End soft skills chart -->
 
 
 
 
 <!-- Start hard skills chart -->
-<div id="hard-skills" style="min-width: 310px; max-width: 800px; height: 700px; margin: 0 auto"></div>
+<div id="hard-skills" class="chart-container"></div>
 
 <script type="text/javascript">
 
@@ -162,13 +170,13 @@ Highcharts.chart('hard-skills', {
 
 </script>
 
-<br><br><hr><br><br>
+<hr>
 <!-- End hard skills chart -->
 
 
 
 <!-- Start other skills chart -->
-<div id="other-skills" style="min-width: 310px; max-width: 800px; height: 700px; margin: 0 auto"></div>
+<div id="other-skills" class="chart-container"></div>
 
 <script type="text/javascript">
 
@@ -223,9 +231,10 @@ Highcharts.chart('other-skills', {
 
 </script>
 
-<br><br><hr><br><br>
+<hr>
 <!-- End other skills chart -->
 
+<br><br>
 
 
 	</body>
